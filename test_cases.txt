@@ -1,0 +1,36 @@
+Test Cases
+
+1. Normal Login
+Username: yousef
+Password: 123456
+Expected Result:
+- Login Status: SUCCESS
+- Suspicious: No
+
+2. Suspicious Username
+Username: admin
+Password: wrong
+Expected Result:
+- Login Status: FAILED
+- Suspicious: Yes
+- Reason: Suspicious username
+
+3. Wrong Normal Username
+Username: yousef
+Password: wrong
+Expected Result:
+- Login Status: FAILED
+- Suspicious: No or based on repeated attempts
+
+4. Long Input Test
+Username: thisisaveryveryveryverylongusername123
+Password: 123456
+Expected Result:
+- Suspicious: Yes
+- Reason: Very long input
+
+5. Repeated Failed Attempts
+Repeat failed login attempts for the same username 3 or more times within a short period
+Expected Result:
+- Suspicious: Yes
+- Reason: Too many failed attempts in short time

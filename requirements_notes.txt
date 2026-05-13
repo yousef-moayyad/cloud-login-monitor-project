@@ -1,0 +1,25 @@
+Deployment and Configuration Notes
+
+AWS Region Used:
+- Europe (Stockholm) eu-north-1
+
+Lambda Function:
+- check_login_attempt
+
+DynamoDB Table:
+- login_attempts
+
+API Gateway:
+- login-monitor-api
+- Route: POST /login
+- Route: OPTIONS /login
+
+SNS Topic:
+- suspicious-login-alerts
+
+Lambda Environment Variables:
+- TABLE_NAME = login_attempts
+- TOPIC_ARN = arn:aws:sns:eu-north-1:382309212137:suspicious-login-alerts
+
+Frontend Local URL:
+- http://localhost:8000/login_test.html
